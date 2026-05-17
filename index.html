@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Quiz AIPIM</h2>
+    </header>
+
+    <section id="quiz">
+
+        <div id="perguntas">
+
+            <h3>1- A Arquitetura de uma CPU é composta por 3 componentes principais. Quais são eles? </h3>
+            <p>Dica: Lembre-se, um é responsável pelo controle, outro pelas funções aritméticas e por fim armazenamento
+                temporário</p>
+            <select name="" id="sel_1">
+                <option value="0">Selecione</option>
+                <option value="1">ULA/UC/REGISTRADORES</option>
+                <option value="2">RAM/HD/SSD</option>
+                <option value="3">DMA/CHIP SELECT/BARRAMENTO</option>
+            </select>
+
+        </div>
+    </section>
+
+
+
+
+</body>
+<script>
+
+    let questoes = [
+        {
+            "pergunta": "A Arquitetura de uma CPU  é composta por 3 componentes principais. Quais são eles?  ",
+            "dica": "Dica: Lembre-se, um é responsável pelo controle, outro pelas funções aritméticas e por fim armazenamento temporário",
+            "alternativas": ["Barramento", "Memória RAM, SSD e Placa-mãe", "ULA, UC,REGISTRADORES"],
+            "respostaCorreta": 2
+        },
+        {
+            "pergunta": "Quem é responsável por realizar cálulos e processar instruções dentro de uma arquitetura computacional?",
+            "dica": "Dica: Lembre se, a unidade lógica aritmética e a unidade de controle são componentes fundamentais dentro dessa estrura",
+            "alternativas": ["CPU", "Memória RAM", "Placa de Vídeo"],
+            "respostaCorreta": 0
+        },
+        {
+            "pergunta": "O _______  permite que componentes de hardware, como placas de vídeo ou som, acessem diretamente a memória, sem precisar da CPU para cada passo, liberando-a para outras tarefas.",
+            "dica": "Dica:  é um recurso da placa mãe fazendo os periféricos terem acesso direto à memória RAM",
+            "alternativas": ["CS", "DMA", "data bus"],
+            "respostaCorreta": 1
+        },
+        {
+            "pergunta": "Qual sinal elétrico ou pino de controle éutilizado na eletrônica digital com a finalidade de ativar ou desativar um circuito?",
+            "dica": "Dica: A tradução literal do termo é Seleção de Chip e sua sigla utiliza as iniciais dessas palavras em inglês.",
+            "alternativas": ["SSD", "CS", "BIOS"],
+            "respostaCorreta": 1
+        },
+        {
+            "pergunta": "Qual tipo de comunicação física de computadores é responsável por localizar e indicar para onde ou de onde cada informação deve ir?",
+            "dica": "Dica: Em inglês, significa barramento de endereço",
+            "alternativas": ["address bus", "SSD", "data bus"],
+            "respostaCorreta": 0
+        },
+        {
+            "pergunta": "Qual famosa linha de processadores intermediários da Intel teve o início de sua fabricação em setembro de 2009 utilizando a arquitetura Nehalem e possui como características consumir menos energia e esquentar menos?",
+            "dica": "Dica: É a linha representada pela letra i seguida do número ímpar que fica logo abaixo do i7.",
+            "alternativas": ["i7", "i2", "i5"],
+            "respostaCorreta": 2
+        },
+        {
+            "pergunta": "Como é chamado o barramento bidirecional que atua em dupla com o de endereço, sendo o verdadeiro encarregado de carregar, receber e enviar o conteúdo ou os dados em si?",
+            "dica": ": Em inglês, significa barramento de dados",
+            "alternativas": ["data bus", "address bus", "BIOS"],
+            "respostaCorreta": 0
+        },
+        {
+            "pergunta": "Como é classificado o processador que possui dois núcleos físicos de processamento independentes integrados no mesmo chip?",
+            "dica": "O termo em inglês une o prefixo que indica dois ou duplo à palavra core",
+            "alternativas": ["quad core", "I Core", "dual core"],
+            "respostaCorreta": 2
+        },
+        {
+            "pergunta": " Qual linha de processadores de alta performance da Intel foi lançada em novembro de 2008 utilizando a arquitetura Nehalem e apresenta como características consumir mais energia e exigir um sistema de refrigeração melhor?",
+            "dica": "Dica: É a linha topo de desempenho daquela geração, representada pela letra i.",
+            "alternativas": ["i5", "AMD", "i7"],
+            "respostaCorreta": 2
+        },
+        {
+            "pergunta": "Como é classificado o processador que possui quatro núcleos físicos de processamento independentes integrados no mesmo chip?",
+            "dica": "Dica: O termo em inglês une o prefixo que lembra um quarteto ou quatro à palavra core.",
+            "alternativas": ["Dual core", "quad core", "octa core"],
+            "respostaCorreta": 1
+        }
+    ]
+</script>
+
+</html>
