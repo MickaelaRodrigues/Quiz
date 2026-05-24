@@ -12,9 +12,37 @@ header {
     color: rgb(243, 238, 238);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 25dvh;
     border-bottom: 5px solid rgba(128, 128, 128, 0.399);
+    
 }
+
+#informacoes_header{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 8dvw;
+    
+}
+
+#conteiner_pontos{
+    color: #e1ddaf;
+    display: flex;
+    flex-direction: row;
+}
+
+#pontos_html{
+
+    background-color: rgba(113, 245, 225, 0.87);
+    color: #1e3c72;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
 
 #quiz {
     width: 100%;
@@ -22,7 +50,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(fundo.jpeg);
+    background-image: url(Agentes\ Inteligentes\ em\ Plataformas\ Informatizada\ \(1\).png);
     border-bottom: 2px solid rgb(14, 0, 62);
 
 }
@@ -31,21 +59,52 @@ header {
 #perguntas {
 
     background-color: rgb(215, 233, 249);
-    width: 25%;
+    width: 30%;
     height: 35dvh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding: 4%;
+    justify-content: space-between;
 
 }
 
-#perguntas select {
+#perguntas h2 {
 
-    background: linear-gradient(135deg, #e3f2fd, #ffffff);
-    border: 1px solid #7cb1d6;
+    font-size: 18px;
+
+
+}
+
+button {
+
+    width: 30dvw;
+    height: 4dvh;
     border-radius: 20px;
-    padding: 8px 15px;
+    color: white;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
+
+
+
+
+
+#titulo{
+
+    background-color: aquamarine;
+
+
+}
+
+#opcoes_resposta{
+
+    background-color: red;
+    width: 100dvw;
+    height: 100dvh;
+
+}
+

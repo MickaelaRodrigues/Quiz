@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="pegar_pergunta()">
     <header>
-        <h2>Quiz AIPIM</h2>
+        <div id="informacoes_header">
+
+            <h2>Quiz AIPIM</h2>
+            
+            <div id="conteiner_pontos">
+                <h5>Pontuação: <div id="pontos_html">0</div></h5> 
+            </div>
+            
+        </div>
     </header>
 
     <section id="quiz">
 
         <div id="perguntas">
 
-            <h3>1- A Arquitetura de uma CPU é composta por 3 componentes principais. Quais são eles? </h3>
-            <p>Dica: Lembre-se, um é responsável pelo controle, outro pelas funções aritméticas e por fim armazenamento
-                temporário</p>
-            <select name="" id="sel_1">
-                <option value="0">Selecione</option>
-                <option value="1">ULA/UC/REGISTRADORES</option>
-                <option value="2">RAM/HD/SSD</option>
-                <option value="3">DMA/CHIP SELECT/BARRAMENTO</option>
-            </select>
-
+            
         </div>
     </section>
 
@@ -35,6 +34,9 @@
 
 </body>
 <script>
+
+
+    let pergunta_atual = 0
 
     let questoes = [
         {
@@ -101,9 +103,95 @@
             "pergunta": "Quais são os principais tipos de memórias utilizados nos computadores, englobando desde o armazenamento temporário, permanente, regravável por luz UV, de inicialização rápida até o armazenamento de grande volume de dados?",
             "dica": "São os cinco principais tipos de memória",
             "alternativas": ["RAM, ROM, EPROM, FLASH e Memória de Massa", "SRAM, DRAM, NVMe, HDD e SSD", "HDD e SSD"],
-             "respostaCorreta": 0
+            "respostaCorreta": 0
         }
     ]
+
+    let bloco_questoes = [];
+
+    let pontos = 0;
+
+    function pegar_pergunta() {
+
+        for (let i = 0; i < questoes.length; i++) {
+
+
+            let bloco_alternativas = ``;
+
+            for (let j = 0;j< questoes[i].alternativas.length; j++) {
+
+            bloco_alternativas += `<button onclick="passar_alternativa(${[j]})">${questoes[i].alternativas[j]}</button><br>
+                                        `
+            } bloco_questoes.push(
+
+                `
+                <div class="pergunta">
+                    
+                    <div class="titulo">
+                        <h2>${questoes[i].pergunta}<br></h2><br><br>
+                        </div>
+                        
+                        <div class="opcoes_resposta">
+                            
+                            ${bloco_alternativas}
+                            
+                            </div>
+                            
+                            </div>
+                            
+                            `
+
+
+            )
+
+        }
+
+        setTimeout(mostrar_pergunta, 500)
+
+    }
+
+
+    function mostrar_pergunta() {
+
+        perguntas.innerHTML = bloco_questoes[pergunta_atual]
+
+
+    }
+
+    function passar_alternativa(alternativa) {
+
+        if(questoes[pergunta_atual].respostaCorreta == alternativa){
+
+            pontos+=100
+           pontos_html.innerHTML = pontos
+
+        } 
+        console.log(questoes[pergunta_atual].respostaCorreta )
+        console.log(alternativa);
+        
+
+        pergunta_atual += 1;
+
+        if (pergunta_atual >= questoes.length){
+
+            if(pontos>500){
+
+                alert(`Parabéns você finalizou o quiz com ${pontos}, já está preparado para prova!!`)
+
+            } else {
+                alert(`Você foi bem mas precisa estudar um ponto mais, aproveite a ferramenta!!`)
+            }
+
+
+
+        }else{
+        
+        mostrar_pergunta()
+
+        }
+
+    }
+
 </script>
 
 </html>
